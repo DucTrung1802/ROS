@@ -1,5 +1,7 @@
 # **Ubuntu install of ROS Noetic**
 
+> NOTE: This instruction focuses on the perfomance installation and running commands. For more detail, you can read pdf book [ROS Robot Programming (35.6 MB)](https://www.robotis.com/service/download.php?no=719) and go to [ROS Official Tutorials](https://wiki.ros.org/ROS/Tutorials).
+
 ## 1. Installation
 
 ### 1.1 Configure your Ubuntu repositories
