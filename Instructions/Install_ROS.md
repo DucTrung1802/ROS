@@ -54,18 +54,30 @@ With the following, you can initialize rosdep.
     sudo rosdep init
     rosdep update
 
+### 1.6 Checking the installation
+If you are ever having problems finding or using your ROS packages make sure that you have your environment properly setup. A good way to check is to ensure that environment variables like ROS_ROOT and ROS_PACKAGE_PATH are set:
+
+    printenv | grep ROS
+
+If Terminal prints:
+
+    ROS_VERSION=1
+    ROS_PYTHON_VERSION=3
+    ROS_PACKAGE_PATH=/opt/ros/noetic/share
+    ROSLISP_PACKAGE_DIRECTORIES=
+    ROS_ETC_DIR=/opt/ros/noetic/etc/ros
+    ROS_MASTER_URI=http://localhost:11311
+    ROS_ROOT=/opt/ros/noetic/share/ros
+    ROS_DISTRO=noetic
+
+Then you have successfully installed ROS and the environment.
 
 
-<!-- ### [Install ROS](https://wiki.ros.org/noetic/Installation/Ubuntu)
 
 
 
-```shell
-alo 123
-```
 
 
-**** -->
 
 
 
