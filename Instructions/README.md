@@ -163,9 +163,15 @@ Then, add this script and then save the file:
 
 > If your workspace name is `catkin_ws`, the script will be `source ~/catkin_ws/devel/setup.bash`.
 
+## 3. Navigating the ROS Filesystem
 
+### 3.1 Prerequisites
 
+For this tutorial we will inspect a package in ros-tutorials, please install it using
 
+    sudo apt-get install ros-<distro>-ros-tutorials
+
+Replace '<distro>' (including the '<>') with the name of your [ROS distribution](http://wiki.ros.org/Distributions) (e.g. indigo, kinetic, lunar etc.)
 
 
 
