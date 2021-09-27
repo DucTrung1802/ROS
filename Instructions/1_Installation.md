@@ -74,4 +74,4 @@ If Terminal prints:
 
 Then you have successfully installed ROS and the environment.
 
-### Next: [2. Create a ROS Workspace](2_Create%20a%20ROS%20Workspace.md)
+### Next: [2. Create a ROS Workspace](2_Create_a_ROS_Workspace.md)
