@@ -92,5 +92,40 @@ A catkin workspace is a folder where you modify, build, and install catkin packa
 
 ## 4.3 Packages in a catkin Workspace
 
+This tutorial will demonstrate how to use the [catkin_create_pkg](http://wiki.ros.org/catkin/commands/catkin_create_pkg) script to create a new catkin package, and what you can do with it after it has been created.
+
+First change to the source space directory of the catkin workspace you created in the [Creating a Workspace for catkin tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace):
+
+    # You should have created this in the Creating a Workspace Tutorial
+    cd ~/catkin_ws/src
+
+Now use the *catkin_create_pkg* script to create a new package called 'beginner_tutorials' which depends on *std_msgs*, *roscpp*, and *rospy*:
+
+    catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
+
+This will create a *beginner_tutorials* folder which contains a [package.xml](http://wiki.ros.org/catkin/package.xml) and a [CMakeLists.txt](http://wiki.ros.org/catkin/CMakeLists.txt), which have been partially filled out with the information you gave *catkin_create_pkg*.
+
+*catkin_create_pkg* requires that you give it a *package_name* and optionally a list of dependencies on which that package depends:
+
+    # This is an example, do not try to run this
+    # catkin_create_pkg <package_name> [depend1] [depend2] [depend3]
+
+*catkin_create_pkg* also has more advanced functionalities which are described in [catkin/commands/catkin_create_pkg](https://github.com/ros-infrastructure/catkin_pkg).
+
+Now run this command:
+
+    cd | cd ~/<workspace name>/src/beginner_tutorials | ls
+
+The output should look like this:
+
+    CMakeLists.txt  include  package.xml  src
+
+Open Files and navigate to ~/catkin_ws/src/beginner_tutorials. Take a look at the structure of  *CMakeLists.txt* file and compare with [CMakeLists.txt which uses catkin](http://wiki.ros.org/catkin/CMakeLists.txt).
+
+## 4.4 Building a catkin workspace and sourcing the setup file
+
+
+
+
 
 
