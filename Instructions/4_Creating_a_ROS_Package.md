@@ -304,7 +304,7 @@ The next set of tags describe the dependencies of your package. The dependencies
     40   <build_depend>rospy</build_depend>
     41   <build_depend>std_msgs</build_depend>
 
-All of our listed dependencies have been added as a build_depend for us, in addition to the default buildtool_depend on catkin. In this case we want all of our specified dependencies to be available at build and run time, so we'll add a exec_depend tag for each of them as well:
+All of our listed dependencies have been added as a build_depend for us, in addition to the default buildtool_depend on catkin. In this case we want all of our specified dependencies to be **available at build and run time, so we'll add a exec_depend tag** for each of them as well:
 
     12   <buildtool_depend>catkin</buildtool_depend>
     13 
