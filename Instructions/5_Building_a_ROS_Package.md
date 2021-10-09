@@ -87,5 +87,45 @@ CMake is an **extensible**, **open-source system** that **manages the build proc
 
 You should already have a [catkin workspace](http://wiki.ros.org/catkin/Tutorials/create_a_workspace) and a new catkin package called **beginner_tutorials** from the previous tutorial, [Creating a Package](http://wiki.ros.org/ROS/Tutorials/CreatingPackage). Go into the catkin workspace if you are not already there and look in the src folder:
 
+    cd ~/catkin_ws/
+    ls src
 
+Output:
 
+    beginner_tutorials/  CMakeLists.txt
+
+You should see that there is a folder called **beginner_tutorials** which you created with [catkin_create_pkg](https://github.com/ros-infrastructure/catkin_pkg) in the previous tutorial. We can now build that package using [catkin_make](http://wiki.ros.org/catkin/commands/catkin_make):
+
+    catkin_make
+
+Output:
+
+    Base path: /home/user/catkin_ws
+    Source space: /home/user/catkin_ws/src
+    Build space: /home/user/catkin_ws/build
+    Devel space: /home/user/catkin_ws/devel
+    Install space: /home/user/catkin_ws/install
+    ####
+    #### Running command: "make cmake_check_build_system" in "/home/user/catkin_ws/build"
+    ####
+    ####
+    #### Running command: "make -j8 -l8" in "/home/user/catkin_ws/build"
+    ####
+
+To check the built files, run:
+
+    cd <workspace name>/build; ls
+
+Replace `<workspace name>` by your workspace name.
+
+Output should look like this:
+
+    atomic_configure    CATKIN_IGNORE        CTestConfiguration.ini  Makefile
+    beginner_tutorials  catkin_make.cache    CTestCustom.cmake       test_results
+    bin                 CMakeCache.txt       CTestTestfile.cmake
+    catkin              CMakeFiles           gtest
+    catkin_generated    cmake_install.cmake  install_manifest.txt
+
+<br>
+
+### Next: [6. Understanding ROS Nodes](6_Understanding_ROS_Nodes.md)
