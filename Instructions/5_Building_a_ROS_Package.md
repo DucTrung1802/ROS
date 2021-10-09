@@ -126,6 +126,21 @@ Output should look like this:
     catkin              CMakeFiles           gtest
     catkin_generated    cmake_install.cmake  install_manifest.txt
 
+
+## 5.2 Quick Commands
+
+- **cw**: Move to the predefined catkin workspace directory ‘~/catkin_ws’
+- **cs**: Move to the directory ‘~/catkin_ws/src’ in the catkin workspace directory that contains source files
+- **cm**: Move to the catkin workspace directory ‘~/catkin_ws’, and build ROS packages with
+‘catkin_make’ command
+
+Run:
+
+    # Set ROS alias command
+    alias cw='cd ~/catkin_ws'
+    alias cs='cd ~/catkin_ws/src'
+    alias cm='cd ~/catkin_ws && catkin_make'
+
 <br>
 
 ### Next: [6. Understanding ROS Nodes](6_Understanding_ROS_Nodes.md)
