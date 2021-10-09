@@ -143,4 +143,4 @@ Run:
 
 <br>
 
-### Next: [6. Understanding ROS Nodes](6_Understanding_ROS_Nodes.md)
+### Next: [6. ROS Operation Test](6_ROS_Operation_Test.md)
