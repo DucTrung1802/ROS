@@ -120,3 +120,6 @@ have followed along well so far, you have completed the ROS operation test.
 The roscore and each node can be terminated by pressing [Ctrl+c] in the corresponding terminal
 windows. For your information, [Ctrl+c] is used to close a program on Linux/Unix forcibly.
 
+<br>
+
+### Next: [7. Important Concepts of ROS](7_Important_Concepts_of_ROS.md)
