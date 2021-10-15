@@ -39,4 +39,7 @@ At here, you may wonder why we choose Quaternion but not other type of coordinat
 
 
 
+Euler angles are more human understandable and also good for decomposing rotations into individual degrees of freedom (for kinematic joints and the like) but have disadvantages like ambiguity and gimbal lock. In practice I would prefer quaternions, as they are easier to compute with (for the computer, not for humans) and more efficient. You have to make three rotations and multiply them together when rotating by Euler angles, whereas a Quaternion is only one rotation and as it already encodes the sin and cos, the conversion from quaternion to matrix is quite efficient.
+
+
 Ref: http://motion.pratt.duke.edu/RoboticSystems/3DRotations.html
