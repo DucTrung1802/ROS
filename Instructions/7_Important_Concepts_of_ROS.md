@@ -325,7 +325,9 @@ specified in the ‘CMakeLists.txt’ file in each package folder.
 An XML file contains package information that describes the package name, author, license,
 and dependent packages.
 
+<br>
 
+### Next: [8. Create your own ROS package](8_Create_your_own_ROS_package.md)
 
 
 
