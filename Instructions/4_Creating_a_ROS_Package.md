@@ -151,6 +151,7 @@ When using [catkin_create_pkg](https://github.com/ros-infrastructure/catkin_pkg)
 
 Run command:
 
+    cd
     rospack depends1 beginner_tutorials 
 
 Output:
