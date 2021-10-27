@@ -183,6 +183,7 @@ In many cases, a dependency will also have its own dependencies. For instance, r
 
 Run:
 
+    cd
     rospack depends1 rospy
 
 Output:
