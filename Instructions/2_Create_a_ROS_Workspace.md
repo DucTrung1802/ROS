@@ -83,21 +83,6 @@ Output:
 
     build  devel  src
 
-## 2.2 Setup Environment
-
-Each time you run a new Terminal for ROS, you need to include `source /opt/ros/noetic/setup.bash` and `source ~/FAIlearning_ws/devel/setup.bash`. For more convenient, we will automatically setup the ROS environment. 
-
-Run the following command to open bashrc file:
-
-    cd ~/<your workspace name>/
-    gedit ~/.bashrc
-
-Then, add this script and then save the file:
-
-    source ~/<your workspace name>/devel/setup.bash
-
-> If your workspace name is `catkin_ws`, the script will be `source ~/catkin_ws/devel/setup.bash`.
-
 <br>
 
 ### Next: [3. Navigating the ROS Filesystem](3_Navigating_the_ROS_Filesystem.md)
