@@ -199,6 +199,7 @@ A package can have quite a few indirect dependencies. Luckily rospack can **recu
 
 Run:
 
+    cd
     rospack depends beginner_tutorials
 
 Output:
