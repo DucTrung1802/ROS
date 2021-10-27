@@ -8,7 +8,6 @@
 - Open "Software & Updates" (purple color).
 - In the tab "Ubuntu Software, check all the (main), (universe), (restricted), (multiverse).
 - For the part "Download from", choose Main Server 
-- **(IMPORTANT)** Check the "Cdrom with Ubuntu 20.04 'Focal Fossa'" (the version and name might change at the moment of installation)
 
 ## 1.2 Setup your sources.list
 Setup your computer to accept software from `packages.ros.org`.
