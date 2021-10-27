@@ -40,12 +40,27 @@ Now pick how much of ROS you would like to install.
 
     sudo apt install ros-noetic-ros-base
 
-## 1.5 Dependencies for building packages
+## 1.5 Environment setup
+
+You must source this script in every **bash** terminal you use ROS in.
+
+    source /opt/ros/noetic/setup.bash
+
+It can be convenient to automatically source this script every time a new shell is launched. These commands will do that for you.
+
+**Bash**
+
+**`If you have more than one ROS distribution installed, ~/.bashrc must only source the setup.bash for the version you are currently using.`**
+
+    echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+    source ~/.bashrc
+
+## 1.6 Dependencies for building packages
 To install this tool and other dependencies for building ROS packages, run:
 
     sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
 
-### 1.5.1 Initialize rosdep
+### 1.6.1 Initialize rosdep
 Before you can use many ROS tools, you will need to initialize rosdep. rosdep enables you to easily install system dependencies for source you want to compile and is required to run some core components in ROS. If you have not yet installed rosdep, do so as follows.
 
     sudo apt install python3-rosdep
@@ -55,7 +70,7 @@ With the following, you can initialize rosdep.
     sudo rosdep init
     rosdep update
 
-## 1.6 Checking the installation
+## 1.7 Checking the installation
 If you are ever having problems finding or using your ROS packages make sure that you have your environment properly setup. A good way to check is to ensure that environment variables like ROS_ROOT and ROS_PACKAGE_PATH are set:
 
     printenv | grep ROS
@@ -71,6 +86,6 @@ If Terminal prints:
     ROS_ROOT=/opt/ros/noetic/share/ros
     ROS_DISTRO=noetic
 
-Then you have successfully installed ROS and the environment.
+Then you have successfully installed ROS Noetic and the environment.
 
 ### Next: [2. Create a ROS Workspace](2_Create_a_ROS_Workspace.md)
