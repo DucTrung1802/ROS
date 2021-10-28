@@ -4,7 +4,7 @@
 
 <br>
 
-### Previous: [1. Installation](1_Installation.md)
+### Previous: [1. Installation](1-Installation.md)
 
 <br>
 
@@ -85,6 +85,6 @@ Output:
 
 <br>
 
-### Next: [3. Navigating the ROS Filesystem](3_Navigating_the_ROS_Filesystem.md)
+### Next: [3. Navigating the ROS Filesystem](3-Navigating-the-ROS-Filesystem.md.md)
 
 

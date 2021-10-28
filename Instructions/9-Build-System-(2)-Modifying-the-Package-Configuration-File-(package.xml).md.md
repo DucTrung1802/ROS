@@ -4,7 +4,7 @@
 
 <br>
 
-### Previous: [8. Build System #1: Create your own ROS package](8_Build_System_(1)_Create_your_own_ROS_package.md)
+### Previous: [8. Build System #1: Create your own ROS package](8-Build-System-(1)-Create-your-own-ROS-package.md.md)
 
 <br>
 
@@ -108,7 +108,7 @@ I modified the package configuration file (package.xml) as follows. Let’s modi
         <export></export>
     </package>
 
-### Next: [10. Build System (3): Modifying the Build Configuration File (CMakeLists.txt)](10_Build_System_(3)_Modifying_the_Build_Configuration_File_(CMakeLists.txt).md)
+### Next: [10. Build System (3): Modifying the Build Configuration File (CMakeLists.txt)](10-Build-System-(3)-Modifying-the-Build-Configuration-File-(CMakeLists.txt).md.md)
 
 
 

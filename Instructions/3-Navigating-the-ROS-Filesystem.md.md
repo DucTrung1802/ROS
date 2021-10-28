@@ -4,7 +4,7 @@
 
 <br>
 
-### Previous: [2. Create a ROS Workspace](2_Create_a_ROS_Workspace.md)
+### Previous: [2. Create a ROS Workspace](2-Create-a-ROS-Workspace.md.md)
 
 <br>
 
@@ -197,7 +197,7 @@ This naming pattern holds for many of the ROS tools.
 
 <br>
 
-### Next: [4. Create a package](4_Creating_a_ROS_Package.md)
+### Next: [4. Create a package](4-Creating-a-ROS-Package.md.md)
 
 
 
