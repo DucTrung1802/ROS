@@ -114,7 +114,7 @@ Output:
 
 To check the built files, run:
 
-    cd <workspace name>/build; ls
+    cd ~/<workspace name>/build; ls
 
 Replace `<workspace name>` by your workspace name.
 
