@@ -4,7 +4,7 @@
 
 <br>
 
-### Previous: [7. Important Concepts of ROS](7_Important_Concepts_of_ROS.md)
+### Previous: [7. Important Concepts of ROS](7-Important-Concepts-of-ROS.md.md)
 
 <br>
 
@@ -67,5 +67,5 @@ package.xml --> Package Configuration File
 
 <br>
 
-### Next: [9. Build System (2): Modifying the Package Configuration File (package.xml)](9_Build_System_(2)_Modifying_the_Package_Configuration_File_(package.xml).md)
+### Next: [9. Build System (2): Modifying the Package Configuration File (package.xml)](9-Build-System-(2)-Modifying-the-Package-Configuration-File-(package.xml).md.md)
 

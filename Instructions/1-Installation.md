@@ -90,4 +90,4 @@ If Terminal prints:
 
 Then you have successfully installed ROS Noetic and the environment.
 
-### Next: [2. Create a ROS Workspace](2_Create_a_ROS_Workspace.md)
+### Next: [2. Create a ROS Workspace](2-Create-a-ROS-Workspace.md.md)

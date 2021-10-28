@@ -4,7 +4,7 @@
 
 <br>
 
-### Previous: [5. Building a ROS Package](5_Building_a_ROS_Package.md)
+### Previous: [5. Building a ROS Package](5-Building-a-ROS-Package.md.md)
 
 <br>
 
@@ -122,4 +122,4 @@ windows. For your information, [Ctrl+c] is used to close a program on Linux/Unix
 
 <br>
 
-### Next: [7. Important Concepts of ROS](7_Important_Concepts_of_ROS.md)
+### Next: [7. Important Concepts of ROS](7-Important-Concepts-of-ROS.md.md)

@@ -4,7 +4,7 @@
 
 <br>
 
-### Previous: [3. Navigating the ROS Filesystem](3_Navigating_the_ROS_Filesystem.md)
+### Previous: [3. Navigating the ROS Filesystem](3-Navigating-the-ROS-Filesystem.md.md)
 
 <br>
 
@@ -354,6 +354,6 @@ Now that you've made a new ROS package, let's build our ROS package.
 
 <br>
 
-### Next: [5. Building a ROS Package](5_Building_a_ROS_Package.md)
+### Next: [5. Building a ROS Package](5-Building-a-ROS-Package.md.md)
 
 
