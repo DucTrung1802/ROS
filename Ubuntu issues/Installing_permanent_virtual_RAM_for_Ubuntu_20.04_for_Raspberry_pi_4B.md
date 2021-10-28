@@ -10,23 +10,24 @@ Use the following command to check the swap partition size in the system.
 
 If virtual memory is not installed, 0 is displayed.
 
-![Ubuntu_without_VR]()
+![Ubuntu_without_VR](Images/Ubuntu_without_VR.png)
 
 If it is installed, amount of memory will be displayed.
 
-![Ubuntu_with_VR]()
+![Ubuntu_with_VR](Images/Ubuntu_with_VR.png)
 
 ## 2. Create swap virtual memory directory
 
 Run commands:
 
     mkdir swap
-    #Here, 1M * 1024 = 1GB of swap memory
+    cd swap
+    #Here, 1M * 1024 = 1GB of swap memory 
     sudo dd if=/dev/zero of=swapfile bs=1M count=1024
 
 I want to have 2GB of virtual memory, then my variable "count" is set equal to 2048.
 
-![Create_swap_VM_directory]()
+![Create_swap_VM_directory](Images/Create_swap_VM_directory.png)
 
 ## 3. Convert the generated file into virtual memory
 
@@ -34,15 +35,13 @@ Continuously run command:
 
     sudo mkswap swapfile
 
-![Convert_the_generated_file_into_virtual_memory]()
+![Convert_the_generated_file_into_virtual_memory](Images/Convert_the_generated_file_into_virtual_memory.png)
 
 ## 4. Activate virtual memory
 
 Continuously run command:
 
     sudo swapon swapfile
-    # change mode to 0600 for security
-    chmod 600 swapfile
 
 ## 5. Check again
 
@@ -65,7 +64,7 @@ Run command:
 
 Press i to change to insert mode.
 
-Navigate to the last line and write: **`/home/ubuntu/swapfile swap swap defaults 0 0`**
+Navigate to the last line and write: **`/home/ubuntu/swap/swapfile swap swap defaults 0 0`**
 
 Press `Esc` key, type ":w" and hit `Enter` key.
 
@@ -73,7 +72,7 @@ Quit vi by pressing `Esc` key, type ":x" and hit `Enter` key.
 
 You will come back to command interface.
 
-![vi_etc_fstab]()
+![vi_etc_fstab](Images/vi_etc_fstab.png)
 
 Okay, now, virtual memory will mount automatically after every system restart.
 
@@ -81,17 +80,14 @@ Okay, now, virtual memory will mount automatically after every system restart.
 
 If you don’t want to use it, the way to unactivate the virtual memory is as follows: 
 
-    cd
+    cd swap
     sudo swapoff swapfile
 
 It still be mounted each time you start your Ubuntu due to startup configuration. 
 
 ## 8. Delete Virtual RAM
 
-If you **really don't need Virtual RAM anymore**, you can delete it by running commands:
-
-    cd
-    rm -R swapfile
+If you **really don't need Virtual RAM anymore**, you can delete it by removing folder "swap" (and in Trash folder as well).
 
 
 
