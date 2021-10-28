@@ -30,11 +30,13 @@ First, make sure your Debian package index is up-to-date:
 
 Now pick how much of ROS you would like to install.
 
-**Option 1 - Desktop-Full Install (Recommend):** Everything in **Option 2** plus 2D/3D simulators and 2D/3D perception packages
+**Option 1 - Desktop-Full Install (Recommend):** Everything in **Option 2** plus 2D/3D simulators and 2D/3D perception packages **(CANNOT be installed on Raspberry Pi 4B (Tested))**
     
     sudo apt install ros-noetic-desktop-full
 
-**Option 2 - Desktop Install:** Everything in **Option 3** plus tools like rqt [rqt](https://wiki.ros.org/rqt) and rviz [rviz](https://wiki.ros.org/rviz)
+**Option 2 - Desktop Install:** Everything in **Option 3** plus tools like rqt [rqt](https://wiki.ros.org/rqt) and rviz [rviz](https://wiki.ros.org/rviz) **(RECOMMEND for Raspberry Pi 4B (Tested))**
+
+    sudo apt install ros-noetic-desktop
 
 **Option 3 - ROS-Base: (Bare Bones)** ROS packaging, build, and communication libraries. No GUI tools.
 
