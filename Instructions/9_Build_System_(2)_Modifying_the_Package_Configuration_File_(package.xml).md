@@ -97,9 +97,9 @@ I modified the package configuration file (package.xml) as follows. Let’s modi
         <license>Apache License 2.0</license>
         <author email="trung.lyduc18@gmail.com">Ly Duc Trung</author>
         <maintainer email="trung.lyduc18@gmail.com">Ly Duc Trung</maintainer>
-        <url type="bugtracker"> [fill issues link git hub here] </url>
-        <url type="repository"> [fill link of repo] </url>
-        <url type="website"> [fill website] </url>
+        <url type="bugtracker">https://github.com/DucTrung1802/ROS/issues</url>
+        <url type="repository">https://github.com/DucTrung1802/ROS/tree/main/Packages</url>
+        <url type="website">https://github.com/DucTrung1802/ROS</url>
         <buildtool_depend>catkin</buildtool_depend>
         <build_depend>std_msgs</build_depend>
         <build_depend>roscpp</build_depend>
