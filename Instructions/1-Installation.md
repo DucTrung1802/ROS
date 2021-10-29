@@ -46,7 +46,7 @@ Now pick how much of ROS you would like to install.
 
 You must source this script in every **bash** terminal you use ROS in.
 
-    source /opt/ros/noetic/setup.bash
+    source ~/<your workspace name>/devel/setup.bash
 
 It can be convenient to automatically source this script every time a new shell is launched. These commands will do that for you.
 
@@ -54,7 +54,9 @@ It can be convenient to automatically source this script every time a new shell 
 
 **`If you have more than one ROS distribution installed, ~/.bashrc must only source the setup.bash for the version you are currently using.`**
 
-    echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+If your workspace name is "catkin_ws", run the following commands to automatically source this script every time a new shell is launched.
+
+    echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
     source ~/.bashrc
 
 ## 1.6 Dependencies for building packages
