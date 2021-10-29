@@ -223,3 +223,96 @@ shown below.**
     ## Add folders to be run by python nosetests
     # catkin_add_nosetests(test)
 
+Options in the build configuration file (CMakeLists.txt) are as follows. The below describes **the minimum required version of ‘cmake’** installed on the operating system. Since it is currently specified as version 3.0.2, if you use a lower version of Cmake than this, you need to update the ‘cmake’ to meet the minimum requirement.
+
+    cmake_minimum_required(VERSION 3.0.2)
+
+The project describes **the name of the package**. Use the package name entered in ‘package. xml’. Note that if the package name is different from the package name described in the `<name>` tag in ‘package.xml’, an error will occur when building the package.
+
+    project(my_first_ros_pkg)
+
+The ‘find_package’ entry is the component package required to perform a build on Catkin. In this example, ‘roscpp’ and ‘std_msgs’ are set as dependent packages. If the package entered here is not found in the system, an error will occur when building the package. In other words, this is an **option to require the installation of dependent packages** for the custom package.
+
+    find_package(catkin REQUIRED COMPONENTS
+        roscpp
+        std_msgs
+    )
+
+The following is a method used when using packages other than ROS. For example, when
+using Boost, the ‘system’ package must be installed beforehand. This feature is **an option that allows you to install dependent packages**.
+
+    find_package(Boost REQUIRED COMPONENTS system)
+
+The ‘catkin_python_setup()’ is **an option when using Python with ‘rospy’**. It invokes the Python installation process ‘setup.py’.
+
+    catkin_python_setup()
+
+‘add_message_files’ is **an option to add a message file**. The ‘FILES’ option will automatically generate a header file (*.h) by referring to the ‘.msg’ files in the ‘msg’ folder of the current package. In this example, message files Message1.msg and Message2.msg are used.
+
+    add_message_files(
+        FILES
+        Message1.msg
+        Message2.msg
+    )
+
+‘add_service_files’ is **an option to add a service file to use**. The ‘FILES’ option will refer to ‘.srv’ files in the ‘srv’ folder in the package. In this example, you have the option to use the service files Service1.srv and Service2.srv.
+
+    add_service_files(
+        FILES
+        Service1.srv
+        Service2.srv
+    )
+
+‘generate_messages’ is **an option to set dependent messages**. This example sets the
+DEPENDENCIES option to use the ‘std_msgs’ message package.
+
+    generate_messages(
+    DEPENDENCIES
+    std_msgs
+    )
+
+‘generate_dynamic_reconfigure_options’ **loads configuration files that are referred when using ‘dynamic_reconfigure’**.
+
+    generate_dynamic_reconfigure_options(
+        cfg/DynReconf1.cfg
+        cfg/DynReconf2.cfg
+    )
+
+The following are **the options when performing a build on Catkin**. ‘INCLUDE_DIRS’ is a setting that specifies to use the header file in the ‘include’ folder, which is the internal folder of the package. ‘LIBRARIES’ is a setting used to specify the package library in the following configuration. ‘CATKIN_DEPENDS’ specifies dependent packages and in this example, the dependent packages are set to ‘roscpp’ and ‘std_msgs’. ‘DEPENDS’ is a setting that describes system-dependent packages.
+
+    catkin_package(
+        INCLUDE_DIRS include
+        LIBRARIES my_first_ros_pkg
+        CATKIN_DEPENDS roscpp std_msgs
+        DEPENDS system_lib
+    )
+
+‘include_directories’ is **an option to specify folders to include**. In the example, `‘${catkin_INCLUDE_DIRS}’` is configured, which refers to the header file the ‘include’ folder in the package. **To specify an additional include folder, append it to the next line of** `‘${catkin_INCLUDE_DIRS}’`.
+
+    include_directories(
+    ${catkin_INCLUDE_DIRS}
+    )
+
+‘add_library’ **declares the library to be created after the build**. The following option will create ‘my_first_ros_pkg’ library from  my_first_ros_pkg.cpp’ file in the ‘src’ folder.
+
+    add_library(my_first_ros_pkg
+        src/${PROJECT_NAME}/my_first_ros_pkg.cpp
+    )
+
+‘add_dependencies’ is a command to perform certain tasks prior to the build process such as creating dependent messages or dynamic reconfigurations. The following options describe the creation of dependent messages and dynamic reconfiguration, which are the dependencies of the 'my_first_ros_pkg’ library.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
