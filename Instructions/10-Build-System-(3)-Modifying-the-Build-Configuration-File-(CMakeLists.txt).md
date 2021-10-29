@@ -302,17 +302,17 @@ The following are **the options when performing a build on Catkin**. ‘INCLUDE_
 ‘add_dependencies’ is a command to perform certain tasks prior to the build process such as creating dependent messages or dynamic reconfigurations. The following options describe the creation of dependent messages and dynamic reconfiguration, which are the dependencies of the 'my_first_ros_pkg’ library.
 
 
+In addition, the Install option used when creating the official distribution ROS package and the testing option used for the package test is provided.
 
+The following is the modified build configuration file (CMakeLists.txt). Modify the file for your package. For more information on how to use the configuration file, please refer to the packages of TurtleBot3 and ROBOTIS OP3 published at ‘https://github.com/ROBOTIS-GIT’.
 
-
-
-
-
-
-
-
-
-
+    cmake_minimum_required(VERSION 3.0.2)
+    project(my_first_ros_pkg)
+    find_package(catkin REQUIRED COMPONENTS roscpp std_msgs)
+    catkin_package(CATKIN_DEPENDS roscpp std_msgs)
+    include_directories(${catkin_INCLUDE_DIRS})
+    add_executable(hello_world_node src/hello_world_node.cpp)
+    target_link_libraries(hello_world_node ${catkin_LIBRARIES})
 
 
 
