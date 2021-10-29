@@ -4,7 +4,7 @@
 
 <br>
 
-### Previous: [9. Build System (2): Modifying the Package Configuration File (package.xml)](9_Build_System_(2)_Modifying_the_Package_Configuration_File_(package.xml).md)
+### Previous: [9. Build System (2): Modifying the Package Configuration File (package.xml)](9-Build-System-(2)-Modifying-the-Package-Configuration-File-(package.xml).md.md)
 
 <br>
 
