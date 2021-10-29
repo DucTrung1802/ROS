@@ -67,5 +67,5 @@ package.xml --> Package Configuration File
 
 <br>
 
-### Next: [9. Build System (2): Modifying the Package Configuration File (package.xml)](9-Build-System-(2)-Modifying-the-Package-Configuration-File-(package.xml).md.md)
+### Next: [9. Build System #2: Modifying the Package Configuration File (package.xml)](9-Build-System-(2)-Modifying-the-Package-Configuration-File-(package.xml).md.md)
 
