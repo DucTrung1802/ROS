@@ -91,6 +91,9 @@ The next step is to run the node. Open a terminal window (Ctrl + Alt + t) and ru
 Finally, open a new terminal window (Ctrl + Alt + t) and run the node with the command below. This is a command to run a node called ‘hello_world_node’ in a package named my_first_ros_pkg’.
 
     rosrun my_first_ros_pkg hello_world_node
+
+Output:
+
     [ INFO] [1635531908.503232126]: hello world!0
     [ INFO] [1635531908.603528094]: hello world!1
     [ INFO] [1635531908.703408777]: hello world!2
