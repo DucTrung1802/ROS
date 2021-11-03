@@ -81,8 +81,9 @@ Displays menu is used to select the message to display on the 3D View panel, and
 | Name      | Description |
 | ----------- | ----------- |
 | Axes    | Displays the xyz axes. |
-| Axes    | This |
-| Axes    | This |
+| Camera    | Creates a new rendering window from the camera perspective and overlays an image on top of it. |
+| DepthCloud    | Displays a point cloud based on the Depth Map. It displays distance values acquired from sensors such as Kinect and Xtion with DepthMap and ColorImage topics as points with overlayed color obtained from
+the camera. |
 | Axes    | This |
 | Axes    | This |
 | Axes    | This |
