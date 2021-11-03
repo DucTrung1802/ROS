@@ -56,3 +56,6 @@ Output will be an error:
 
 The might be a change in ROS Distribution. Eclipse is just an Integrated Development Environment (IDE) so don't hesitate to use other IDE such as: Visual Studio Code, PyCharm, QtCreator and so on. I prefer to use Visual Studio Code since it is a lightweight and versatile software.
 
+<br>
+
+### Next: [13. ROS Tools #1: 3D Visualization Tool (RViz)](13-ROS-Tools-(1)-3D-Visualization-Tool-(RViz).md)
