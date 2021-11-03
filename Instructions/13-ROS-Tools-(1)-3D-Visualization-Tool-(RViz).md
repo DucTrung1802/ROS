@@ -82,30 +82,29 @@ Displays menu is used to select the message to display on the 3D View panel, and
 | ----------- | ----------- |
 | Axes    | Displays the xyz axes. |
 | Camera    | Creates a new rendering window from the camera perspective and overlays an image on top of it. |
-| DepthCloud    | Displays a point cloud based on the Depth Map. It displays distance values acquired from sensors such as Kinect and Xtion with DepthMap and ColorImage topics as points with overlayed color obtained from
-the camera. |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
-| Axes    | This |
+| DepthCloud    | Displays a point cloud based on the Depth Map. It displays distance values acquired from sensors such as Kinect and Xtion with DepthMap and ColorImage topics as points with overlayed color obtained from the camera. |
+| Effort    | Displays the force applied to each rotary joint of the robot. |
+| FluidPressure    | Displays the pressure of fluids, such as air or water. |
+| Grid    | Displays 2D or 3D grids. |
+| Grid Cells    | Displays each cells of the grid. It is mainly used to display obstacles in the costmap of the navigation. |
+| Illuminance    | Displays the illuminance. |
+| Image    | Displays the image in a new rendering window. Unlike the Camera display, it does not overlay the camera. |
+| InteractiveMarkers    | Displays Interactive Markers. We can change the position (x, y, z) and rotation (roll, pitch, yaw) with the mouse. |
+| LaserScan    | Displays the laser scan value. |
+| Map    | Displays the occupancy map, used in navigation, on top of the ground plane. |
+| Marker    | Displays markers such as arrows, circles, triangles, rectangles, and cylinders provided by RViz. |
+| MarkerArray    | Displays multiple markers. |
+| Odometry    | Displays the odometry information in relation to the passage of time in the form of arrows. For example, as the robot moves, arrow markers are displayed showing the traveled path in a connected form according to the time intervals. |
+| Path    | Displays the path of the robot used in navigation. |
+| Point Cloud    | Displays point cloud data. This is used to display sensor data from depth cameras such as RealSense, Kinect, Xtion, etc. Since PointCloud2 is compatible with the latest Point Cloud Library (PCL), we can generally use PointCloud2. |
+| Point Cloud2   |  as above |
+| PointStamped    | Displays a rounded point. |
+| Polygon    | Displays a polygon outline. It is mainly used to simply display the outline of a robot on the 2D plane. |
+| Pose    | Displays the pose (location + orientation) on 3D. The pose is represented in the shape of an arrow where the origin of the arrow is the position (x, y, z,) and the direction of the arrow is the orientation (roll, pitch, yaw). For instance, pose can be represented with the position and orientation of the 3D robot model, while it can be represented with the goal point. |
+| Pose Array    | Displays multiple poses. |
+| Range    | This is used to visualize the measured range of a distance sensor such as an ultrasonic sensor or an infrared sensor in the form of a cone. |
+| RelativeHumidity    | Displays the relative humidity. |
+| RobotModel    | Displays the robot model. |
+| TF    | Displays the coordinate transformation TF used in ROS. It is displayed with the xyz axes much like the previously mentioned axes, but each axis expresses the hierarchy with an arrow according to the relative coordinates. |
+| Temperature    | Displays the temperature. |
+| WrenchStamped    | Displays the wrench, which is the torsion movement, in the form of ‘arrow’ (force) and ‘arrow+circle’ (torque). |
