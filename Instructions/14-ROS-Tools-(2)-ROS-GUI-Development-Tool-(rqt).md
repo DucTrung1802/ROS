@@ -52,6 +52,27 @@ From the ‘rqt’ menu on the top, if we select [Plugins] we can see about 30 p
 - Launch This is a GUI plugin of roslaunch, which is useful when we cannot remember the
 name or composition of roslaunch.
 
+### Introspection
+
+- Node Graph: This is a plugin for the graphical view that allows us to check the relationship diagram of the currently running nodes or message flows.
+
+- Package Graph: This is a plugin for the graphical view that displays the dependencies of the packages.
+
+- Process Monitor: We can check the PID (Processor ID), CPU usage, memory usage, and
+number of threads of the currently running nodes.
+
+### Logging
+
+- Bag: This is a plugin regarding the ROS data logging.
+
+- Console: This is a plugin to check the warning and error messages occurring in the nodes in one screen.
+
+- Logger Level: This is a tool to select a logger, which is responsible for publishing the logs, and set the logger level 9 to publish a specific log such as ‘Debug’, ‘Info’, ‘Warn’, ‘Error’, and ‘Fatal’. It is very convenient if ‘Debug’ is selected while debugging process.
+
+
+
+
+
 
 
 
