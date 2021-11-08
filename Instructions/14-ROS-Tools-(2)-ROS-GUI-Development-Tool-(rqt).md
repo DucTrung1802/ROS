@@ -108,7 +108,7 @@ information of the robot controller.
 
 ### Visualization
 
-- I mage View: This is a plugin that can check the image data from a camera. This is useful for
+- Image View: This is a plugin that can check the image data from a camera. This is useful for
 simple camera data testing.
 
 - Navigation Viewer: This is a plugin to check the position or goal point of the robot in the navigation.
