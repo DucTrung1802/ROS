@@ -153,7 +153,7 @@ The ‘rqt_graph’ is a tool that shows the correlation among active nodes and 
 
 ![Example of rqt_graph](../Images/rpt_graph.png)
 
-In the above figure, circles represent nodes (/teleop_turtle, /turtlesim) and text on the arrow (/turtle1/cmd_vel) represent topic messages. The arrow indicates the transmission of the message. In the previous example when we executed ‘turtle_teleop_key’ and ‘turtlesim_node’, the ‘teleop_turtle’ node and the ‘turtlesim’ node were running respectively. We can verify that these two nodes are transmitting data with the arrow key values of the keyboard in the form of translational speed and rotational speed message (topic name: /turtle1/cmd_vel).
+In the above figure, circle represent nodes (/teleop_turtle, /turtlesim) and text on the arrow (/turtle1/cmd_vel) represents topic message. The arrow indicates the transmission of the message. In the previous example when we executed ‘turtle_teleop_key’ and ‘turtlesim_node’, the ‘teleop_turtle’ node and the ‘turtlesim’ node were running respectively. We can verify that these two nodes are transmitting data with the arrow key values of the keyboard in the form of translational speed and rotational speed message (topic name: /turtle1/cmd_vel).
 
 ## 5. rqt_plot
 
