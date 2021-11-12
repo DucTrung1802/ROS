@@ -83,6 +83,29 @@ Output:
 
     build  devel  src
 
+
+## 2.2 Environment setup
+
+You must source this script in every **bash** terminal you use ROS in.
+
+The following command is just for understanding, don't run.
+
+    source ~/<your workspace name>/devel/setup.bash
+
+It can be convenient to automatically source this script every time a new shell is launched. These commands will do that for you.
+
+**Bash**
+
+**`If you have more than one ROS distribution installed, ~/.bashrc must only source the setup.bash for the version you are currently using.`**
+
+If your workspace name is "catkin_ws", run the following commands to automatically source this script every time a new shell is launched.
+
+    echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+    source ~/.bashrc
+
+
+
+
 <br>
 
 ### Next: [3. Navigating the ROS Filesystem](3-Navigating-the-ROS-Filesystem.md.md)
