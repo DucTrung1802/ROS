@@ -269,7 +269,7 @@ Let’s write a code that performs subscriber node functions with the following 
 
 **`Note: These following terminals run together.`**
 
-Now let’s build the message file, publisher node, and subscriber node in the ‘ros_tutorials_topic’ package with the following command. The source of the ‘ros_tutorials_topic’ package is in `‘~/ catkin_ws/src/ros_tutorials_topic/src’`, and the message file of the ‘ros_tutorials_topic’ package is in `‘~/catkin_ws/src/ros_tutorials_topic/msg’`.
+Now let’s build the message file, publisher node, and subscriber node in the ‘ros_tutorials_topic’ package with the following command. The source of the ‘ros_tutorials_topic’ package is in `‘~/catkin_ws/src/ros_tutorials_topic/src’`, and the message file of the ‘ros_tutorials_topic’ package is in `‘~/catkin_ws/src/ros_tutorials_topic/msg’`.
 
 Run the following commands:
 
