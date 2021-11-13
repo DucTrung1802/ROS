@@ -33,7 +33,7 @@ Output:
 CMakeLists.txt  include  msg  package.xml  src
 
 
-# 2. Modifying the Package Configuration File (package.xml)
+## 2. Modifying the Package Configuration File (package.xml)
 
 The ‘package.xml’ file, one of the required ROS configuration files, is an XML file containing the package information such as the package name, author, license, and dependent packages. Let’s open the file using an editor (such as gedit, vim, emacs, etc.) with the following command and modify it for the current node.
 
@@ -96,7 +96,7 @@ The following code shows how to modify the ‘package.xml’ file to match the p
         </export>
     </package>
 
-# 3. Modifying the Build Configuration File (CMakeLists.txt)
+## 3. Modifying the Build Configuration File (CMakeLists.txt)
 
 Catkin, which is the build system of ROS, uses CMake. Therefore, the build environment is described in the ‘CMakeLists.txt’ file in the package folder. This file configures executable file creation, dependency package priority build, link creation, and so on.
 
@@ -138,7 +138,7 @@ The following is the modified code of CMakeLists.txt for the package I created. 
     ${catkin_EXPORTED_TARGETS})
     target_link_libraries(topic_subscriber ${catkin_LIBRARIES})
 
-# 4. Writing the Message File
+## 4. Writing the Message File
 
 The following option is added to the CMakeLists.txt file.
 
@@ -158,7 +158,7 @@ Copy 2 entries into MsgTutorial.msg. They are type of variables to be sent in me
     time stamp
     int32 data
 
-# 5. Writing the Publisher Node
+## 5. Writing the Publisher Node
 
 The following option was previously configured in the ‘CMakeLists.txt’ file to create an executable file:
 
@@ -215,7 +215,7 @@ Let’s create a code that performs publisher node functions with the following 
     }
 
 
-# 6. Writing the Subscriber Node
+## 6. Writing the Subscriber Node
 
 The following is an option in the ‘CMakeLists.txt’ file to generate the executable file.
 
@@ -265,7 +265,7 @@ Let’s write a code that performs subscriber node functions with the following 
         return 0;
     }
 
-# 7. Building a Node
+## 7. Building a Node
 
 **`Note: These following terminals run together.`**
 
@@ -278,7 +278,7 @@ Run the following commands:
 
 The output files of built package will be located in the ‘/build’ and ‘/devel’ folders in ‘~/catkin_ws’. The configuration used in Catkin build is stored in ‘/build’ folder, and executable files are stored in ‘/devel/lib/ros_tutorials_topic’ and the message header file that is automatically generated from the message file is stored in ‘/devel/include/ros_tutorials_topic’. Check the files in each folder above to verify the created output.
 
-# 8. Running the Publisher
+## 8. Running the Publisher
 
 Now let’s run the publisher. The following is a command to run the ‘ros_tutorial_msg_publisher’ node of the ‘ros_tutorials_topic’ package using the ‘rosrun’ command. Be sure to run ‘roscore’ from another terminal before running the publisher node. From now on, we will assume ‘roscore’ is executed before the node execution.
 
@@ -309,7 +309,7 @@ Run this command in a new terminal:
 
 ![Received ‘ros_tutorial_msg’ topic](../Images/Received_‘ros_tutorial_msg’_topic.png)
 
-# 9. Running the Subscriber
+## 9. Running the Subscriber
 
 The following is the command to run the ‘topic_subscriber’ node of ‘ros_tutorials_topic’ package using the ‘rosrun’ command to run the subscriber.
 
@@ -321,7 +321,7 @@ When the subscriber is executed, the output screen is shown as in following figu
 
 ![Screen showing the execution of the ‘topic_subscriber’ node](../Images/Screen_showing_the_execution_of_the_‘topic_subscriber’_node.png)
 
-# 10. Checking the Communication Status of the Running Nodes
+## 10. Checking the Communication Status of the Running Nodes
 
 Next, let’s check the communication status of executed nodes using ‘rqt’ from Section 6.2. You
 can use either ‘rqt_graph’ or ‘rqt’ command as shown below. When executing ‘rqt’, select
