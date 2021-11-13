@@ -48,7 +48,7 @@ The following code shows how to modify the ‘package.xml’ file to match the p
         <!--  One maintainer tag required, multiple allowed, one person per tag  -->
         <!--  Example:   -->
         <!--  <maintainer email="jane.doe@example.com">Jane Doe</maintainer>  -->
-        <maintainer email="trung.lyduc18@gmail.com">Duc Trung</maintainer>
+        <maintainer email="trung.lyduc18@gmail.com">Ly Duc Trung</maintainer>
         <!--  One license tag required, multiple allowed, one license per tag  -->
         <!--  Commonly used license strings:  -->
         <!--    BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3  -->
@@ -60,7 +60,7 @@ The following code shows how to modify the ‘package.xml’ file to match the p
         <!--  Author tags are optional, multiple are allowed, one per tag  -->
         <!--  Authors do not have to be maintainers, but could be  -->
         <!--  Example:  -->
-        <author email="trung.lyduc18@gmail.com">Duc Trung</author>
+        <author email="trung.lyduc18@gmail.com">Ly Duc Trung</author>
         <!--  The *depend tags are used to specify dependencies  -->
         <!--  Dependencies can be catkin packages or system dependencies  -->
         <!--  Examples:  -->
