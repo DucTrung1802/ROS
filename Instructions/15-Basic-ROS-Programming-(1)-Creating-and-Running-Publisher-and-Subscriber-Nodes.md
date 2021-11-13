@@ -265,9 +265,9 @@ Let’s write a code that performs subscriber node functions with the following 
         return 0;
     }
 
-## 7. Building a Node
-
 **`Note: These following terminals run together.`**
+
+## 7. Building a Node
 
 Now let’s build the message file, publisher node, and subscriber node in the ‘ros_tutorials_topic’ package with the following command. The source of the ‘ros_tutorials_topic’ package is in `‘~/catkin_ws/src/ros_tutorials_topic/src’`, and the message file of the ‘ros_tutorials_topic’ package is in `‘~/catkin_ws/src/ros_tutorials_topic/msg’`.
 
@@ -336,3 +336,4 @@ Run:
 
 In the figure above, we can observe that the publisher node (topic_publisher) is transmitting a topic (ros_tutorial_msg), and the topic is received by the subscriber node (topic_subscriber) and the echo node (/rostopic...).
 
+**In this section, we have created a publisher and subscriber nodes that are used in the topic communication, and executed them to learn how to communicate between nodes.**
