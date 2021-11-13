@@ -4,7 +4,7 @@
 
 <br>
 
-### Previous: [13. ROS Tools #1: 3D Visualization Tool (RViz)](13-ROS-Tools-(1)-3D-Visualization-Tool-(RViz).md)
+### Previous: [ROS Tools #2: ROS GUI Development Tool (rqt)](14-ROS-Tools-(2)-ROS-GUI-Development-Tool-(rqt).md)
 
 <br>
 
