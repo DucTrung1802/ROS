@@ -393,6 +393,195 @@ Open a new terminal and run:
     roscd ros_tutorials_service/src
     gedit service_server.cpp
 
+Fill the **service_server.cpp** file with the following code.
+
+    // ROS Default Header File
+    #include "ros/ros.h"
+    // SrvTutorial Service File Header (Automatically created after build)
+    #include "ros_tutorials_service/SrvTutorial.h"
+
+    // The below process is performed when there is a service request
+    // The service request is declared as 'req', and the service response is declared as 'res'
+    bool calculation(ros_tutorials_service::SrvTutorial::Request &req,
+    ros_tutorials_service::SrvTutorial::Response &res)
+    {
+        // The service name is 'ros_tutorial_srv' and it will call 'calculation' function
+        // upon the service request.
+        res.result = req.a + req.b;
+        // Displays 'a' and 'b' values used in the service request and
+        // the 'result' value corresponding to the service response
+        ROS_INFO("request: x=%ld, y=%ld", (long int)req.a, (long int)req.b);
+        ROS_INFO("sending back response: %ld", (long int)res.result);
+        
+        return true;
+    }
+
+    int main(int argc, char **argv)
+    // Node Main Function
+    {
+        ros::init(argc, argv, "service_server");  // Initializes Node Name
+        ros::NodeHandle nh;                       // Node handle declaration
+        
+        // Declare service server 'ros_tutorials_service_server'
+        // using the 'SrvTutorial' service file in the 'ros_tutorials_service' package.
+        // The service name is 'ros_tutorial_srv' and it will call 'calculation' function
+        // upon the service request.
+        ros::ServiceServer ros_tutorials_service_server = nh.advertiseService("ros_tutorial_srv",
+        calculation);
+        
+        ROS_INFO("ready srv server!");
+        
+        ros::spin();        // Wait for the service request
+        
+        return 0;
+    }
+
+## 6. Writing the Service Client Node
+
+The following option is added to the ‘CMakeLists.txt’ file to generate the executable file.
+
+    add_executable(service_client src/service_client.cpp)
+
+When the ‘service_client.cpp’ file is built, the ‘service_client’ executable file will be generated. Let’s create a code that performs the service client node function.
+
+Open a new terminal and run:
+
+    roscd ros_tutorials_service/src
+    gedit service_client.cpp
+
+Fill the **service_client.cpp** file with the following code.
+
+    #include "ros/ros.h"
+    // ROS Default Header File
+    // SrvTutorial Service File Header (Automatically created after build)
+    #include "ros_tutorials_service/SrvTutorial.h"
+    #include <cstdlib>					 // Library for using the "atoll" function
+
+    int main(int argc, char **argv)			 // Node Main Function
+    {
+        ros::init(argc, argv, "service_client");		
+        
+        if (argc != 3)				
+        // Initializes Node Name
+        // input value error handling
+        {
+            ROS_INFO("cmd : rosrun ros_tutorials_service service_client arg0 arg1");
+            ROS_INFO("arg0: double number, arg1: double number");
+            return 1;
+        }
+        
+        ros::NodeHandle nh;
+        // Node handle declaration for communication with ROS system
+        // Declares service client 'ros_tutorials_service_client'
+        // using the 'SrvTutorial' service file in the 'ros_tutorials_service' package.
+        // The service name is 'ros_tutorial_srv'
+        ros::ServiceClient ros_tutorials_service_client =
+        nh.serviceClient<ros_tutorials_service::SrvTutorial>("ros_tutorial_srv");
+        // Declares the 'srv' service that uses the 'SrvTutorial' service file
+        ros_tutorials_service::SrvTutorial srv;
+        // Parameters entered when the node is executed as a service request value are stored at 'a' and 'b'
+        srv.request.a = atoll(argv[1]);
+        srv.request.b = atoll(argv[2]);
+        // Request the service. If the request is accepted, display the response value
+        
+        if (ros_tutorials_service_client.call(srv))
+        {
+            ROS_INFO("send srv, srv.Request.a and b: %ld, %ld", (long int)srv.request.a, (long
+            int)srv.request.b);
+            ROS_INFO("receive srv, srv.Response.result: %ld", (long int)srv.response.result);
+        }
+        
+        else
+        {
+            ROS_ERROR("Failed to call service ros_tutorial_srv");
+            return 1;
+        }
+        
+        return 0;
+    }
+
+## 7. Building Nodes
+
+Build the service file, service server node and service client node in the ‘ros_tutorials_service’ package with the following command. The source of the ‘ros_tutorials_service’ package is in ‘~/catkin_ws/src/ros_tutorials_service/src’, and the service file is in ‘~/catkin_ws/src/ros_tutorials_service/srv’.
+
+Run:
+
+    cd ~/catkin_ws && catkin_make #Go to the catkin folder and run the catkin build
+
+The output of the build is saved in the ‘~/catkin_ws/build’ and ‘~/catkin_ws/devel’ folders. The executable files are stored in ‘~/catkin_ws/devel/lib/ros_tutorials_service’ and the catkin build configuration is stored in ‘~/catkin_ws/build’. The service header file that is automatically generated from the message file is stored in ‘~/catkin_ws/devel/include/ros_tutorials_service’. Check the files in each path above to verify the created output.
+
+**`Note: These following terminals run together.`**
+
+## 8. Running the Service Server
+
+The service server written in the previous section is programmed to wait until there is a service request. Therefore, when the following command is executed, the service server will be launched and waits for a service request. Be sure to run ‘roscore’ before running the node.
+
+Open a new terminal and run:
+
+    roscore
+
+Open another terminal and run:
+
+    rosrun ros_tutorials_service service_server
+
+Output:
+
+    [ INFO] [1636822260.125656996]: ready srv server!
+
+## 9. Running the Service Client
+
+After running the service server, open a new terminal and run the service client with the following command:
+
+    rosrun ros_tutorials_service service_client 2 3
+
+Output:
+
+    [ INFO] [1636822342.123420692]: send srv, srv.Request.a and b: 2, 3
+    [ INFO] [1636822342.124493179]: receive srv, srv.Response.result: 5
+
+The parameter 2 and 3 entered with execution command are programmed to be transmitted as the service request values. As a result, a and b requested service as a value of 2 and 3 respectively, and the sum of these two values is transmitted as a response value. In this case, execution parameter is used as a service request, but actually, it can be replaced with a command, or a value to be calculated and a variable for a trigger can be used as a service request.
+
+![Topic Publisher (left) and Topic Subscriber (right)](../Images/Topic_Publisher_(left)_and_Topic_Subscriber_(right).png)
+
+Note that the service can’t be seen in the ‘rqt_graph’ because it is a one-time communication
+while Topic publishers and subscribers are maintaining the connection as shown in above figure.
+
+## 10. Using the rosservice call Command
+
+The service request can be executed by launching a service client node such as ‘service_client’ from above example, but there is also a method using the ‘rosservice call’ command or the ‘Service Caller’ of ‘rqt’. Let’s look at how to use the ‘rosservice call’.
+
+Write the corresponding service name, such as ‘/ros_tutorial_srv’, after the rosservice call command as shown in the command below. This is followed by the required parameters for the service request.
+
+Run:
+
+    rosservice call /ros_tutorial_srv 10 2
+
+Output:
+
+    result: 12
+
+In the previous example, we set the ‘int64’ type variable ‘a’ and ‘b’ as the request as shown in the service file below, so we entered ‘10’ and ‘2’ as parameters. The ‘int64’ type of ‘12’ is returned as a ‘result’ of the service response.
+
+    int64 a
+    int64 b
+    ---
+    int64 result
+
+## 11. Using the GUI Tool, Service Caller
+
+Finally, there is a method of using rqt’s ‘ServiceCaller’, which is a GUI tool. First, let’s run ‘rqt’, the ROS GUI tool.
+
+    rqt
+
+Next, select [Plugins] → [Services] → [Service Caller] from the menu of the ‘rqt’ program and the below screen will appear.
+
+![Service request through rqt’s ‘Service Caller’ plug-in](../Images/Service_request_through_rqt’s_‘Service_Caller’_plug-in.png)
+
+If you select the service name in the Service field at the top, you will see the information required for the service request in the Request field. To request a service, enter the information in the Expression of each request information. ‘10’ was entered for ‘a’, and ‘5’ was entered for ‘b’. Upon clicking on the `<Call>` icon in the form of a green phone at the upper right corner, the service request will be executed, and the response at the bottom of the screen will show the ‘result’ of the service response.
+
+The rosservice call described above has the advantage of running directly on the terminal, but for those who are unfamiliar with Linux or ROS commands, we recommend to use rqt’s ‘Service Caller’.
+
+**In this section, we have created the service server and the service client, and executed them to learn how to communicate between nodes with service.**
 
 
 
