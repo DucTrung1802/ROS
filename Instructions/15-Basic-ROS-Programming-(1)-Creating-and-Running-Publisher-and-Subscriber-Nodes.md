@@ -4,7 +4,7 @@
 
 <br>
 
-### Previous: [ROS Tools #2: ROS GUI Development Tool (rqt)](14-ROS-Tools-(2)-ROS-GUI-Development-Tool-(rqt).md)
+### Previous: [14. ROS Tools #2: ROS GUI Development Tool (rqt)](14-ROS-Tools-(2)-ROS-GUI-Development-Tool-(rqt).md)
 
 <br>
 
