@@ -284,7 +284,7 @@ The following code is in the newest form of ROS Noetic. I had modified it for ru
     # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
     ## Build option for the "service_server" node.
-    add_dependencies(service_server ${${PROJECT_NAME}_EXPORTED_TARGETS}{catkin_EXPORTED_TARGETS})
+    add_dependencies(service_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
     ## Build option for the "service_client" node.
     add_dependencies(service_client ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
