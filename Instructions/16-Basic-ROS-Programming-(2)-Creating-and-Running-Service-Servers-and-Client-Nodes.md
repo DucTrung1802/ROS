@@ -583,13 +583,6 @@ The rosservice call described above has the advantage of running directly on the
 
 **In this section, we have created the service server and the service client, and executed them to learn how to communicate between nodes with service.**
 
+<br>
 
-
-
-
-
-
-
-
-
-
+### Next: [17. Basic ROS Programming #3: Writing and Running the Action Server and Client Node](17-Basic-ROS-Programming-(3)-Writing-and-Running-the-Action-Server-and-Client-Node.md)
