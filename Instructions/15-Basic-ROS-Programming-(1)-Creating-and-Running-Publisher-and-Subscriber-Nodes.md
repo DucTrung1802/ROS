@@ -337,3 +337,7 @@ Run:
 In the figure above, we can observe that the publisher node (topic_publisher) is transmitting a topic (ros_tutorial_msg), and the topic is received by the subscriber node (topic_subscriber) and the echo node (/rostopic...).
 
 **In this section, we have created a publisher and subscriber nodes that are used in the topic communication, and executed them to learn how to communicate between nodes.**
+
+<br>
+
+### Next: [16. Basic ROS Programming #2: Creating and Running Service Servers and Client Nodes](16-Basic-ROS-Programming-(2)-Creating-and-Running-Service-Servers-and-Client-Nodes.md)
