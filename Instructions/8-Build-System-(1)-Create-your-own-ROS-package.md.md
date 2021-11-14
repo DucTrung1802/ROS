@@ -10,7 +10,7 @@
 
 # 8. Build System #1: Create your own ROS package
 
-The command to create a ROS package is as follows.
+The command to create a ROS package is as the following.
 
     catkin_create_pkg [PACKAGE_NAME] [DEPENDENT_PACKAGE_1] [DEPENDENT_PACKAGE_N]
 

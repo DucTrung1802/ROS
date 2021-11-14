@@ -75,7 +75,7 @@ Output:
     #### Running command: "make -j8 -l8" in "/home/<your username>/catkin_ws/build"
     ####
 
-Now, your current folder should have 3 folders as following. Run command:
+Now, your current folder should have 3 folders as the following. Run command:
 
     ls
 

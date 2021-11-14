@@ -38,7 +38,7 @@ If you have installed ROS with ‘ros-[ROS_DISTRO]-desktop-full’ command, RViz
 
     sudo apt-get install ros-kinetic-rviz
 
-The execution command of RViz is as follows. However, just as for any other ROS tool, roscore must be running. For your reference, you can also run it with the node running command ‘rosrun rviz rviz’.
+The execution command of RViz is as the following. However, just as for any other ROS tool, roscore must be running. For your reference, you can also run it with the node running command ‘rosrun rviz rviz’.
 
     rviz
 
@@ -76,7 +76,7 @@ them. This is mainly used in simulations, and if there is a need to restart it, 
 
 
 The most frequently used menu when using RViz will probably be the Displays 5 menu. This
-Displays menu is used to select the message to display on the 3D View panel, and descriptions on each item are explained as follow.
+Displays menu is used to select the message to display on the 3D View panel, and descriptions on each item are explained as the following.
 
 | Name      | Description |
 | ----------- | ----------- |

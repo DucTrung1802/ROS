@@ -223,7 +223,7 @@ shown below.**
     ## Add folders to be run by python nosetests
     # catkin_add_nosetests(test)
 
-Options in the build configuration file (CMakeLists.txt) are as follows. The below describes **the minimum required version of ‘cmake’** installed on the operating system. Since it is currently specified as version 3.0.2, if you use a lower version of Cmake than this, you need to update the ‘cmake’ to meet the minimum requirement.
+Options in the build configuration file (CMakeLists.txt) are as the following. The below describes **the minimum required version of ‘cmake’** installed on the operating system. Since it is currently specified as version 3.0.2, if you use a lower version of Cmake than this, you need to update the ‘cmake’ to meet the minimum requirement.
 
     cmake_minimum_required(VERSION 3.0.2)
 
