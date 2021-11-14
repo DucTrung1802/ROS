@@ -87,7 +87,7 @@ Below are descriptions of each statement.
 | `<export>`   | It is used when using a tag name that is not  pecified in ROS. The most widely used case is for metapackages. In this  ase, use `<export><metapackage/></export>` to notify that the package is a metapackage.        |
 | `<metapackage>`   | The official tag used within the export tag that declares the current package as a metapackage.        |
 
-I modified the package configuration file (package.xml) as follows. Let’s modify it in your own environment as well. If you are unfamiliar with it, you can use the below file as is:
+I modified the package configuration file (package.xml) as the following. Let’s modify it in your own environment as well. If you are unfamiliar with it, you can use the below file as is:
 
     <?xml version="1.0"?>
     <package>
