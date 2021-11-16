@@ -110,7 +110,7 @@ Note that parameters can be set to integers, floats, boolean, string, dictionari
 
 ## 3. Reading Parameters
 
-The following gets the parameter value from ‘calculation_method’ and sets it as the value of ‘g_operator’. As a result, ‘g_operator’ from the code in section 7.5.1 checks the parameter value in every ‘0.1’ seconds to determine which operation to use on the values received through the service request.
+The following gets the parameter value from ‘calculation_method’ and sets it as the value of ‘g_operator’. As a result, ‘g_operator’ from the code in part 1 checks the parameter value in every ‘0.1’ seconds to determine which operation to use on the values received through the service request.
 
     nh.getParam("calculation_method", g_operator);
 
@@ -197,35 +197,4 @@ Output:
     result: 2
 
 The ‘calculation_method’ parameter can be changed with the ‘rosparam set’ command. With the changed parameters, you can see the different result values with the same input of ‘rosservice call /ros_tutorial_srv 10 5’. As shown in above example, parameters in ROS can control the flow, setting, and processing of nodes from outside the node. It’s a very useful feature so familiarize yourself with this feature even if you do not need it right away.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
