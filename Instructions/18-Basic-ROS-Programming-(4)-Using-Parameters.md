@@ -114,7 +114,99 @@ The following gets the parameter value from ‘calculation_method’ and sets it
 
     nh.getParam("calculation_method", g_operator);
 
+
+
 ## 4. Building and Running Nodes
+
+Rebuild the service server node in the ‘ros_tutorials_service’ package with the following command.
+
+Open a new terminal and run:
+
+    cd ~/catkin_ws && catkin_make
+
+When the build is done, run the ‘service_server’ node of the ‘ros_tutorials_service’ package with the following command.
+
+**`Note: These following terminals run together.`**
+
+Run:
+
+    roscore
+
+Open a new terminal and run:
+
+    rosrun ros_tutorials_service service_server
+
+Output:
+
+    [ INFO] [1637075462.736561000]: ready srv server!
+
+## 5. Displaying Parameter Lists
+
+The ‘rosparam list’ command displays a list of parameters currently used in the ROS network. From the displayed list, ‘/calculation_method’ is the parameter we used.
+
+Open a new terminal and run command:
+
+    rosparam list
+
+Output:
+
+    /calculation_method
+    /rosdistro
+    /roslaunch/uris/host_localhost__35469
+    /rosversion
+    /run_id
+
+## 6. Example of Using Parameters
+
+Set the parameters according to the following command, and verify that the service processing has changed while requesting the same service each time.
+
+Open a new terminal and run:
+
+    rosparam set /calculation_method 1  #  Addition
+    rosservice call /ros_tutorial_srv 10 5  # Input variables a and b for arithmetic operation
+
+Output:
+
+    result: 15
+
+Run:
+
+    rosparam set /calculation_method 2  # Substraction
+    rosservice call /ros_tutorial_srv 10 5
+
+Output:
+
+    result: 5
+
+Run:
+
+    rosparam set /calculation_method 3  # Multiplication
+    rosservice call /ros_tutorial_srv 10 5
+
+Output:
+
+    result: 50
+
+Run:
+
+    rosparam set /calculation_method 4  # Division
+    rosservice call /ros_tutorial_srv 10 5
+
+Output:
+
+    result: 2
+
+The ‘calculation_method’ parameter can be changed with the ‘rosparam set’ command. With the changed parameters, you can see the different result values with the same input of ‘rosservice call /ros_tutorial_srv 10 5’. As shown in above example, parameters in ROS can control the flow, setting, and processing of nodes from outside the node. It’s a very useful feature so familiarize yourself with this feature even if you do not need it right away.
+
+
+
+
+
+
+
+
+
+
 
 
 
