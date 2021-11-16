@@ -4,7 +4,7 @@
 
 <br>
 
-### Previous: [17. Basic ROS Programming #3: Writing and Running the Action Server and Client Node](17-Basic-ROS-Programming-(3)-Writing-and-Running-the-Action-Server-and-Client-Node.md)
+### Previous: [18. Basic ROS Programming #4: Using Parameters](18-Basic-ROS-Programming-(4)-Using-Parameters.md)
 
 <br>
 
