@@ -198,3 +198,6 @@ Output:
 
 The ‘calculation_method’ parameter can be changed with the ‘rosparam set’ command. With the changed parameters, you can see the different result values with the same input of ‘rosservice call /ros_tutorial_srv 10 5’. As shown in above example, parameters in ROS can control the flow, setting, and processing of nodes from outside the node. It’s a very useful feature so familiarize yourself with this feature even if you do not need it right away.
 
+<br>
+
+### Next: [19. Basic ROS Programming #5: Using roslaunch](19-Basic-ROS-Programming-(5)-Using-roslaunch.md)
