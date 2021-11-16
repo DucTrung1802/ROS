@@ -590,10 +590,62 @@ Since we have run `rosrun ros_tutorials_action action_client` Output for `rosrun
     [INFO] [1495764516.293575887]: Action server started, sending goal.
     [INFO] [1495764536.295139830]: Action finished: SUCCEEDED
 
-Open a new terminal and run
+Now, you rerun the command:
 
+    rosrun ros_tutorials_action action_client
 
+Then open a new terminal and run:
 
+    rostopic echo /ros_tutorial_action/feedback
+
+Output:
+
+    header: 
+    seq: 0
+    stamp: 
+        secs: 1637050208
+        nsecs: 641334923
+    frame_id: ''
+    status: 
+    goal_id: 
+        stamp: 
+        secs: 1637050208
+        nsecs: 634833392
+        id: "/action_client-1-1637050208.634833392"
+    status: 1
+    text: "This goal has been accepted by the simple action server"
+    feedback: 
+    sequence: [0, 1, 1]
+    ---
+    header: 
+    seq: 1
+    stamp: 
+        secs: 1637050209
+        nsecs: 635975656
+    frame_id: ''
+    status: 
+    goal_id: 
+        stamp: 
+        secs: 1637050208
+        nsecs: 634833392
+        id: "/action_client-1-1637050208.634833392"
+    status: 1
+    text: "This goal has been accepted by the simple action server"
+    feedback: 
+    sequence: [0, 1, 1, 2]
+    ---
+    .....
+
+## 10. Visualize the action message
+
+Rerun the command:
+
+    rosrun ros_tutorials_action action_client
+
+Then run:
+
+    rqt_graph
+    
 To visually verify the information, use the ‘rqt_graph’ command shown below. Figure A
 shows the relationship between the action server and client as well as the action message, which are transmitted and received bidirectionally. Here, the action message is represented by the name ‘ros_tutorial_action/action_topics’. When Actions is deselected in the group menu, all five messages used in the action can be seen as shown in Figure B. Here we can see that the action basically consists of 5 topics and nodes that publish and subscribe to this topic.
 
@@ -604,9 +656,6 @@ The relationship between the action message (Figure A):
 5 messages used in Action (Figure B):
 
 ![5 messages used in Action](../Images/5_messages_used_in_Action.png)
-
-
-
 
 
 
