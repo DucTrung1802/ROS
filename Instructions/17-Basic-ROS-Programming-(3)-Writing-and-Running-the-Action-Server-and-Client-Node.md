@@ -536,19 +536,74 @@ Run command:
 
     cd ~/catkin_ws && catkin_make
 
+**`Note: These following terminals run together.`**
+
+## 8. Running the Action Server
+
+The action server written in the previous section is programmed to wait without any processing until there is an action ‘goal’. Therefore, when the following command is executed, the action server waits for a ‘goal’ to be set. Be sure to run ‘roscore’ before running the node.
+
+Open a new terminal and run:
+
+    roscore
+
+Open another terminal and run:
+
+    rosrun ros_tutorials_action action_server
+
+Action is similar to Service, as described in Section 16, in that there is an action ‘goal’ and a ‘result’ corresponding to the ‘request’ and ‘response’. However, actions have ‘feedback’ messages corresponding to intermediate feedback in the process. This is might look similar to Service, but it is very similar to Topic in its actual message communication method. The use of the current
+action message can be verified through the ‘rqt_graph’ and ‘rostopic list’ commands as shown below.
+
+To check the working topic, run command:
+
+    rostopic list
+
+Output:
+
+    /ros_tutorial_action/cancel
+    /ros_tutorial_action/feedback
+    /ros_tutorial_action/goal
+    /ros_tutorial_action/result
+    /ros_tutorial_action/status
+    /rosout
+    /rosout_agg
+
+For more information on each message, append the ‘-v’ option to the rostopic list. This will separate the topics to be published and subscribed, as follows:
+
+    rostopic list -v
+
+## 9. Running the Action Client
+
+The action client is run with the following command. As the action client is started, the action ‘goal’ message is set to 20.
+
+Open a new terminal and run:
+
+    rosrun ros_tutorials_action action_client
+
+Output for `rosrun ros_tutorials_action action_server`:
+
+    [ INFO] [1637036634.926458828]: ros_tutorial_action: Executing, creating fibonacci sequence of order 20 with seeds 0, 1
+    [ INFO] [1637036654.926516255]: ros_tutorial_action: Succeeded
+
+Since we have run `rosrun ros_tutorials_action action_client` Output for `rosrun ros_tutorials_action action_client`:
+
+    [INFO] [1495764515.999158825]: Waiting for action server to start.
+    [INFO] [1495764516.293575887]: Action server started, sending goal.
+    [INFO] [1495764536.295139830]: Action finished: SUCCEEDED
+
+Open a new terminal and run
 
 
 
+To visually verify the information, use the ‘rqt_graph’ command shown below. Figure A
+shows the relationship between the action server and client as well as the action message, which are transmitted and received bidirectionally. Here, the action message is represented by the name ‘ros_tutorial_action/action_topics’. When Actions is deselected in the group menu, all five messages used in the action can be seen as shown in Figure B. Here we can see that the action basically consists of 5 topics and nodes that publish and subscribe to this topic.
 
+The relationship between the action message (Figure A):
 
+![The relationship between the action message](../Images/The_relationship_between_the_action_message.png)
 
+5 messages used in Action (Figure B):
 
-
-
-
-
-
-
+![5 messages used in Action](../Images/5_messages_used_in_Action.png)
 
 
 
